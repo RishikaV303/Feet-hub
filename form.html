@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeetHub-Form</title>
+    <link rel="shortcut icon" href="./assests/icons/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <div class="nav-wrap">
+                    <div class="logo">
+                        <img src="./assests/images/home/logo.png" alt="logo">
+                    </div>
+
+                    <label for="check" class="menu_icon"> <i class="bi bi-list"></i></label>
+                    <input type="checkbox" id="check">
+                    <ul>
+                        <li id="opone"><a href="./index.html">Home</a></li>
+                        <li><a href="#">
+                                <h3 class="home">Products</h3>
+                            </a></li>
+                        <li id="opone"><a href="./about.html">About</a></li>
+                        <li id="opone"><a href="./about.html">Contact us</a></li>
+                    </ul>
+                    <div class="icon">
+
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="buynow-form">
+            <div class="wrapper">
+                <form class="form-container">
+                    <div class="customer-info">
+                        <h2>Customer Info</h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="Vimala" id="user_name" onkeyup="forName()"/>
+                                <span id="name_err"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Jothi" id="last_name" onkeyup="forLastName()"/>
+                                <span id="last_err"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <select id="state" onchange="populateDistricts()">
+                                    <option value="">Select State</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                </select>
+                                <span id="state_err"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="district">City / District</label>
+                                <select id="district">
+                                    <option value="">Select District</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class=" full-width">
+                            <label>Address</label>
+                            <textarea placeholder="Type your Address" id="address" onkeyup="foraddress()"></textarea>
+                            <span id="address_err"></span>
+                        </div>
+
+                        <div class="form-group ">
+                            <label>Landmark</label>
+                            <input type="text" placeholder="Vetri cinemas Opp" id="landmark" onkeyup="forlandmark()"/>
+                            <span id="landmark_err"></span>
+                        </div>
+
+                        <div class="form-group ">
+                            <label>Mobile Number</label>
+                            <input type="text" placeholder="6381182890" id="userNum" onkeyup="forNum()"/>
+                            <span id="num_err"></span>
+                        </div>
+                    </div>
+                    <div class="payment-info">
+                        <h2>Payment Method</h2>
+                        <div class="payment-section">
+                            <p>Your available balance</p>
+                            <div class="nobalance">
+                                <label>
+                                    <input type="radio" name="payment" disabled />
+                                    Feethub pay balance ₹0.00 <span class="unavailable">Unavailable</span>
+                                </label>
+                                <p class="warning"><i class="bi bi-info-circle"></i>Insufficient balance. <a
+                                        href="#">Add money & get rewarded</a></p>
+                            </div>
+                            <div class="form-row coupon-row">
+                                <i class="bi bi-plus"></i>
+                                <input type="text" placeholder="Enter Code" id="code" required/>
+                                <button type="submit" class="apply">Apply</button>
+                            </div>
+
+                            <p>Another payment method</p>
+                            <label><input type="radio" name="payment" /> Credit or debit card</label>
+                            <div class="card-icons">
+                                <img src="./assests/images/form/visa.png" alt="VISA" />
+                                <img src="./assests/images/form/mastercard.png" alt="MasterCard" />
+                                <img src="./assests/images/form/Rupay.png" alt="RuPay" />
+                                <img src="./assests/images/form/Maestro.png" alt="Maestro" />
+                            </div>
+
+                            <label><input type="radio" name="payment" /> Other UPI Apps</label>
+                            <label><input type="radio" name="payment" /> Cash on Delivery/Pay on Delivery</label>
+                            <p class="info">Cash, UPI and Cards accepted. <a href="#">Know more.</a></p>
+                        </div>
+                    </div>
+
+                    <button type="button" class=" proceed button-primary" onclick="finalSubmit()">Proceed</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="first-half">
+                <div class="footer-section brand">
+                    <h1>FeetHub</h1>
+                    <p>Stylish and comfortable shoes<br>
+                        designed to elevate your<br>
+                        everyday look with ease.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="./product.html">Product</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./about.html #contact-section">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h2>Help</h2>
+                    <ul>
+                        <li><a href="#">Sizing</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h2>Follow Us</h2>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/?lang=en" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 FeetHub. All rights reserved.</p>
+                <div class="policy-links">
+                    <a href="#">Terms & Conditions |</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="./js/query.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
