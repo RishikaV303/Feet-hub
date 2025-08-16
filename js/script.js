@@ -148,6 +148,29 @@ let forNum = () => {
     phoneErr.innerHTML = "<i class='bi bi-check-square'></i>";
     return true;
 };
+let forcode = () => {
+    let unum = document.getElementById("code").value.trim();
+    let phoneErr = document.getElementById("code_err");
+
+    if (unum.length === 0 || unum === " ") {
+        phoneErr.innerHTML = "Enter your phone number";
+        return false;
+    }
+
+    if (isNaN(unum)) {
+        phoneErr.innerHTML = "Only numbers allowed";
+        return false;
+    }
+
+    let numPatt = /^[0-9]{6}$/;
+    if (!unum.match(numPatt)) {
+        phoneErr.innerHTML = "Must be a valid 6-digit number";
+        return false;
+    }
+
+    phoneErr.innerHTML = "<i class='bi bi-check-square'></i>";
+    return true;
+};
 
 let forState = () => {
     let state = document.getElementById("state").value;
@@ -178,3 +201,15 @@ let finalSubmit = () => {
     alert("Form submitted successfully!");
     document.querySelector("form").submit();
 };
+
+let iconOne=document.querySelector("#details .wrapper .right .product-right .header .wishlist");
+iconOne.addEventListener('click',function(){
+    iconOne.style.color="red";
+});
+// floating btn
+    document.getElementById("floatBtn").addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

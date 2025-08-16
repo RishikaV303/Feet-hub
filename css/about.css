@@ -32,10 +32,11 @@ header .wrapper nav {
 
 #story {
   width: 100%;
-  height: 150vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0px;
 }
 
 #story .wrapper {
@@ -226,6 +227,7 @@ header .wrapper nav {
 .contact-right img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 @media (max-width: 1440px) {
     :root {
@@ -249,8 +251,6 @@ header .wrapper nav {
        margin: 20px 0px;
        
       }
- 
-  
   #story .wrapper .accordion .name {
     padding: 35px 10px;
   }
@@ -458,7 +458,7 @@ header .wrapper nav {
         --fs-36: 30px;
         --fs-40: 34px;
         --fs-60: 38px;
-        --fs-64: 36px;
+        --fs-64: 30px;
         --fs-70: 58px;
         --fs-96: 84px;
     }
@@ -470,6 +470,7 @@ header .wrapper nav {
   #story .wrapper .accordion .name {
     padding: 12px 8px;
   }
+
     #contact-section{
      height: auto;
     padding: 20px 0px;

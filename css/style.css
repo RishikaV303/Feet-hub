@@ -33,7 +33,7 @@
 
 .button-primary {
     width: 100%;
-    background: #fccc11;
+    background-color: var(--primary-yellow);
     color: black;
     border: none;
     padding: 15px;
@@ -41,6 +41,9 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: var(--fs-20);
+}
+.button-primary:hover {
+    background-color: #ffe270;
 }
 
 html {
@@ -138,7 +141,7 @@ header .wrapper #banner .carousel {
     height: 100%;
     position: absolute;
     opacity: 0;
-    transition-duration: 1s;
+    transition-duration: 2s;
 }
 
 header .wrapper #banner .carousel .image {
@@ -153,14 +156,14 @@ header .wrapper #banner .carousel .image img {
 }
 
 header .wrapper #banner .carousel .contentOne {
-    width: 50%;
+    width: 40%;
     height: 50%;
     display: flex;
     flex-direction: column;
     gap: 5px;
     position: absolute;
     top: 230px;
-    left: 300px;
+    left: 0px;
 }
 
 header .wrapper #banner .carousel .contentOne h1 {
@@ -187,11 +190,11 @@ header .wrapper #banner .carousel .contentOne p {
 }
 
 header .wrapper #banner .carousel .contentOne a {
-    position: absolute;
+    /* position: absolute;
     bottom: 25px;
-    left: 170px;
-    padding: 10px 20px;
-    width: 200px;
+    left: 170px; */
+    /* padding: 10px 20px; */
+    width: 30%;
     text-align: center;
     background-color: var(--primary-yellow);
     font-size: var(--fs-28);
@@ -228,8 +231,7 @@ header .wrapper #banner .carousel .contentTwo p {
 }
 
 header .wrapper #banner .carousel .contentTwo a {
-    padding: 10px 20px;
-    width: 200px;
+    width: 40%;
     text-align: center;
     background-color: var(--primary-yellow);
     font-size: var(--fs-28);
@@ -268,9 +270,7 @@ header .wrapper #banner .carousel .contentThree p {
 }
 
 header .wrapper #banner .carousel .contentThree a {
-    padding: 10px 20px;
-    width: 300px;
-    /* width: 200px; */
+   width: 50%;
     text-align: center;
     background-color: var(--primary-yellow);
     font-size: var(--fs-28);
@@ -314,8 +314,7 @@ header .wrapper #banner .carousel .contentFour p {
 }
 
 header .wrapper #banner .carousel .contentFour a {
-    padding: 10px 20px;
-    width: 200px;
+    width: 30%;
     text-align: center;
     background-color: var(--primary-yellow);
     font-size: var(--fs-28);
@@ -614,7 +613,7 @@ header .wrapper #banner .carousel.active {
 
 #testimonials .wrapper .testimonial-list .testimonial-item .wrapper .testimonial-content .image {
     width: 15%;
-    height: 90%;
+    height: auto;
 }
 
 #testimonials .wrapper .testimonial-list .testimonial-item .wrapper .testimonial-content .image img {
@@ -682,20 +681,14 @@ footer .footer-wrapper .first-half .footer-section a {
     color: white;
 }
 
-footer .footer-wrapper .first-half .footer-section h1 {
-    font-size: var(--fs-20);
-    font-weight: 700;
-    color: white;
-}
-
 footer .footer-wrapper .first-half .footer-section h2 {
     font-size: var(--fs-18);
     font-weight: 700;
-    color: white;
+    color: var(--primary-yellow);
 }
 
 footer .footer-wrapper .first-half .footer-section p {
-    font-size: var(--fs-18);
+    font-size: var(--fs-14);
     font-weight: 400;
     color: white;
 }
@@ -717,9 +710,29 @@ footer .footer-wrapper .footer-bottom p {
 
 footer .footer-wrapper .footer-bottom a {
     font-size: var(--fs-14);
-    text-decoration: none;
     color: white;
 }
+.floating-btn {
+  position: fixed; /* stays in place when scrolling */
+  bottom: 20px;    /* distance from bottom */
+  right: 20px;     /* distance from right */
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%; /* circle */
+  background-color: #ff4081;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.floating-btn:hover {
+  background-color: #e73370;
+}
+
 
 /* media query */
 /* Large Desktop (1440px and above) */
@@ -1052,7 +1065,7 @@ footer .footer-wrapper .footer-bottom a {
 }
 
 /* Tablet Portrait (481px to 767px) */
-@media screen and (max-width: 767px) and (min-width: 481px) {
+@media screen and (max-width: 768px) and (min-width: 481px) {
     :root {
         --fs-96: 48px;
         --fs-70: 40px;
@@ -1105,8 +1118,11 @@ footer .footer-wrapper .footer-bottom a {
 
     header .wrapper nav .nav-wrap ul li a {
         font-size: 18px;
-    }
+    } 
+    header .wrapper #banner .carousel .contentOne a {
+        width: 40%;
 
+    }
     header .wrapper #banner .carousel .contentOne {
         left: 50px;
         top: 100px;
@@ -1275,7 +1291,18 @@ footer .footer-wrapper .footer-bottom a {
     header .wrapper nav .nav-wrap ul li a {
         font-size: 16px;
     }
-
+   header .wrapper #banner .carousel .contentOne a {
+        width: 40%;
+    }
+    header .wrapper #banner .carousel .contentTwo a {
+        width: 50%;
+    }
+    header .wrapper #banner .carousel .contentThree a {
+        width: 60%;
+    }
+    header .wrapper #banner .carousel .contentFour a {
+    width: 40%;
+}
     header .wrapper #banner .carousel .contentOne {
         left: 20px;
         top: 80px;
@@ -1449,7 +1476,19 @@ footer .footer-wrapper .footer-bottom a {
     header .wrapper nav .nav-wrap ul li a {
         font-size: 14px;
     }
+       header .wrapper #banner .carousel .contentOne a {
+        width: 40%;
 
+    }
+        header .wrapper #banner .carousel .contentTwo a {
+        width: 50%;
+    }
+    header .wrapper #banner .carousel .contentThree a {
+        width: 60%;
+    }
+    header .wrapper #banner .carousel .contentFour a {
+    width: 40%;
+}
     header .wrapper #banner .carousel .contentOne {
         left: 15px;
         top: 60px;

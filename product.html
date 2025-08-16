@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeetHub-product</title>
-            <link rel="shortcut icon" href="./assests/icons/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assests/icons/logo.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/product.css">
@@ -31,11 +31,11 @@
                         <li><a href="#">
                                 <h3 class="home">Products</h3>
                             </a></li>
-                        <li id="opone"><a href="./about.html">About</a></li>
+                        <li id="opone"><a href="./about.html">About us</a></li>
                         <li id="opone"><a href="./about.html">Contact us</a></li>
                     </ul>
                     <div class="icon">
-                       
+
                         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         <a href="#"><i class="fa-regular fa-circle-user"></i></a>
                     </div>
@@ -47,9 +47,9 @@
 
                     <div class="banner-content">
                         <h2>NEW STYLES ON SALE: <span>UP TO 40% OFF</span></h2>
-                    
 
-                    <a href="#" class="shop-link">Shop All Our New Markdowns</a>
+
+                        <a href="#" class="shop-link">Shop All Our New Markdowns</a>
                     </div>
 
                     <button class="arrow"><i class="fa-solid fa-chevron-right"></i></button>
@@ -62,15 +62,47 @@
             <div class="wrapper">
                 <div class="search-box">
                     <span class="search-icon"><i class="bi bi-search"></i></span>
+                    <form action="">
                     <input type="text" placeholder="Search for your favorite item">
+                </form>
                 </div>
-                <div class="filter-toggle">
-                    <span>Show Filters</span>
-                    <img src="./assests/images/product/filter.png" alt="Filter Icon">
+                <div class="filter-toggle" id="filterToggle">
+                 <span class="filter">Show Filters</span>
+                <img src="./assests/images/product/filter.png" alt="Filter Icon">
                 </div>
+
+                <!-- Sidebar Filter Panel -->
+                <div class="filter-sidebar" id="filterSidebar">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button id="closeFilter">&times;</button>
+                    </div>
+                    <div class="filter-content">
+                       
+                        <label>
+                            <input type="checkbox" /> Men's Shoes
+                        </label>
+                        <label>
+                            <input type="checkbox" /> Women's Shoes
+                        </label>
+                        <label>
+                            <input type="checkbox" /> Kids' Shoes
+                        </label>
+                        <hr>
+                        <label>
+                            <input type="checkbox" /> Price: Low to High
+                        </label>
+                        <label>
+                            <input type="checkbox" /> Price: High to Low
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Overlay -->
+                <div class="filter-overlay" id="filterOverlay"></div>
             </div>
         </div>
-        <section id="Mens">
+        <section class="product-section" id="Mens">
             <div class="wrapper">
                 <h1>Men's Footwear</h1>
                 <div class="cards">
@@ -134,10 +166,70 @@
                             </div>
                         </div>
                     </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/men4.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>ClassicSlip Sandals</h2>
+                                    <h4>Men’s Shoes</h4>
+                                    <h4>2 Colours</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹799</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/men5.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>TrekMaster Hiking Boots</h2>
+                                    <h4>Men’s Shoes</h4>
+                                    <h4>1 Colour</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹3,199</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/men6.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>SprintTrail Runners</h2>
+                                    <h4>Men’s Shoes</h4>
+                                    <h4>1 Colour</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹1,499</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
-        <section id="Mens">
+        <section class="product-section"  id="Mens">
             <div class="wrapper">
                 <h1>Women's Collection</h1>
                 <div class="cards">
@@ -201,10 +293,70 @@
                             </div>
                         </div>
                     </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/women4.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>VelvetTouch House Slippers</h2>
+                                    <h4>Women’s Slippers</h4>
+                                    <h4>2 Colours</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹499</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/women5.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>ElegantPoint Pumps</h2>
+                                    <h4> Women’s Shoes</h4>
+                                    <h4>1 Colour</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹1,899</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/women6.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>DaintySlide Pearl Flats</h2>
+                                    <h4>Women’s Shoes</h4>
+                                    <h4>1 Colour</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹899</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
-        <section id="Mens">
+        <section class="product-section" id="Mens">
             <div class="wrapper">
                 <h1>Kids' Picks</h1>
                 <div class="cards">
@@ -258,11 +410,71 @@
                                 <div class="details">
                                     <h2>MiniGlide School Shoes</h2>
                                     <h4>Kids’ Shoes</h4>
-                                    <h4>2 Colour</h4>
+                                    <h4>2 Colours</h4>
 
                                 </div>
                                 <div class="price">
                                     <h2>₹749</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/kids4.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>CuteBunny Slippers</h2>
+                                    <h4>Kids’ Slippers</h4>
+                                    <h4>2 Colours</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹449</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/kids5.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2> SwiftRun Sports Shoes</h2>
+                                    <h4>Kids’ Shoes</h4>
+                                    <h4>3 Colours</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹1,099</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product">
+                            <div class="image">
+                                <img src="./assests/images/product/kids6.png" alt="images!">
+
+                            </div>
+                            <div class="content">
+                                <div class="details">
+                                    <h2>PlaySprint Sports Shoes</h2>
+                                    <h4>Kids’ Shoes</h4>
+                                    <h4>1 Colour</h4>
+
+                                </div>
+                                <div class="price">
+                                    <h2>₹899</h2>
 
                                 </div>
                             </div>
@@ -277,7 +489,9 @@
         <div class="footer-wrapper">
             <div class="first-half">
                 <div class="footer-section brand">
-                    <h1>FeetHub</h1>
+                    <div class="logo">
+                        <img src="./assests/images/home/logo.png" alt="logo">
+                    </div>
                     <p>Stylish and comfortable shoes<br>
                         designed to elevate your<br>
                         everyday look with ease.</p>
@@ -286,9 +500,9 @@
                 <div class="footer-section">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="./product.html">Product</a></li>
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./about.html #contact-section">Contact Us</a></li>
+                        <li><a href="./product.html">Products</a></li>
+                        <li><a href="./about.html">About us</a></li>
+                        <li><a href="./about.html#contact-section">Contact us</a></li>
                     </ul>
                 </div>
 
@@ -303,11 +517,12 @@
 
                 <div class="footer-section">
                     <h2>Follow Us</h2>
-                   <div class="social-icons">
-                    <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-                    <a href="https://x.com/?lang=en" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                </div>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/?lang=en" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -322,7 +537,32 @@
 
     </footer>
 
+    <script>
+        // filter
+const filterToggle = document.getElementById('filterToggle');
+const filterSidebar = document.getElementById('filterSidebar');
+const filterOverlay = document.getElementById('filterOverlay');
+const closeFilter = document.getElementById('closeFilter');
 
+filterToggle.addEventListener('click', () => {
+    filterSidebar.classList.add('active');
+    filterOverlay.classList.add('active');
+    document.body.classList.add("no-scroll");
+});
+
+closeFilter.addEventListener('click', () => {
+    filterSidebar.classList.remove('active');
+    filterOverlay.classList.remove('active');
+    document.body.classList.remove("no-scroll");
+});
+
+filterOverlay.addEventListener('click', () => {
+    filterSidebar.classList.remove('active');
+    filterOverlay.classList.remove('active');
+    document.body.classList.remove("no-scroll");
+});
+
+    </script>
 </body>
 
 </html>

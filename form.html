@@ -30,7 +30,7 @@
                         <li><a href="#">
                                 <h3 class="home">Products</h3>
                             </a></li>
-                        <li id="opone"><a href="./about.html">About</a></li>
+                        <li id="opone"><a href="./about.html">About us</a></li>
                         <li id="opone"><a href="./about.html">Contact us</a></li>
                     </ul>
                     <div class="icon">
@@ -47,7 +47,7 @@
             <div class="wrapper">
                 <form class="form-container">
                     <div class="customer-info">
-                        <h2>Customer Info</h2>
+                        <h2 class="sub-head">Customer Info</h2>
 
                         <div class="form-row">
                             <div class="form-group">
@@ -101,9 +101,9 @@
                         </div>
                     </div>
                     <div class="payment-info">
-                        <h2>Payment Method</h2>
+                        <h2 class="sub-head">Payment Method</h2>
                         <div class="payment-section">
-                            <p>Your available balance</p>
+                            <p class="sub-head-two">Your available balance</p>
                             <div class="nobalance">
                                 <label>
                                     <input type="radio" name="payment" disabled />
@@ -114,11 +114,12 @@
                             </div>
                             <div class="form-row coupon-row">
                                 <i class="bi bi-plus"></i>
-                                <input type="text" placeholder="Enter Code" id="code" required/>
+                                <input type="text" placeholder="Enter Code" id="code"  onkeyup="forcode()" required/>
+                                <span id="code_err"></span>
                                 <button type="submit" class="apply">Apply</button>
                             </div>
 
-                            <p>Another payment method</p>
+                            <p class="sub-head-two">Another payment method</p>
                             <label><input type="radio" name="payment" /> Credit or debit card</label>
                             <div class="card-icons">
                                 <img src="./assests/images/form/visa.png" alt="VISA" />
@@ -143,7 +144,9 @@
         <div class="footer-wrapper">
             <div class="first-half">
                 <div class="footer-section brand">
-                    <h1>FeetHub</h1>
+                     <div class="logo">
+                        <img src="./assests/images/home/logo.png" alt="logo">
+                </div>
                     <p>Stylish and comfortable shoes<br>
                         designed to elevate your<br>
                         everyday look with ease.</p>
@@ -152,9 +155,9 @@
                 <div class="footer-section">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="./product.html">Product</a></li>
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./about.html #contact-section">Contact Us</a></li>
+                        <li><a href="./product.html">Products</a></li>
+                        <li><a href="./about.html">About us</a></li>
+                        <li><a href="./about.html #contact-section">Contact us</a></li>
                     </ul>
                 </div>
 
