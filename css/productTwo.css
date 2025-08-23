@@ -152,6 +152,12 @@ header .wrapper .banner-slider .arrow{
     align-items: center;
     gap: 10px;
 }
+#details .wrapper .left .groups img{
+   width: 80px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 8px;
+}
 #details .wrapper .right{
     width: 60%;
     height: 100%;
@@ -217,7 +223,6 @@ header .wrapper .banner-slider .arrow{
 }
 #details .wrapper .right .product-right .color-options{
     width: 30%;
-    background-color: #444;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -225,6 +230,12 @@ header .wrapper .banner-slider .arrow{
 #details .wrapper .right .product-right .color-options img{
     width: 50%;
     height: 50%;
+     cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+#details .wrapper .right .product-right .color-options img.selected {
+  border: 2px solid #f4c430; 
 }
 .sizes{
     width: 85%;
@@ -282,16 +293,21 @@ header .wrapper .banner-slider .arrow{
 /* modal */
 #modal{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 600px;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    padding: 16px;
+    z-index: 1000;
+    overflow-y: auto;
 }
 #modal .wrapper{
-    width: 50%;
-    height: 90%;
+    width: 90%;
+    max-width: 900px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,6 +320,8 @@ header .wrapper .banner-slider .arrow{
   position: relative;
   font-family: 'Segoe UI', sans-serif;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow: auto;
 }
 
 .close-btn {
@@ -480,6 +498,17 @@ hr {
         height: auto;
         padding: 40px 0;
     }
+    #details .wrapper .left .groups img {
+    width: 60px;
+    }
+           #details .wrapper .right .product-right .color-options {
+        height: 50px;
+        width: 50px;
+    }
+       #details .wrapper .right .product-right .color-options img{
+        height: 100%;
+        width: 100%;
+    }
       #modal {
         height: auto;
         font-size: var(--fs-18);
@@ -539,6 +568,17 @@ hr {
         /* justify-content: center; */
         margin-top: 20px;
     }
+       #details .wrapper .left .groups img {
+    width: 60px;
+    }
+       #details .wrapper .right .product-right .color-options {
+        height: 50px;
+        width: 50px;
+    }
+       #details .wrapper .right .product-right .color-options img{
+        height: 100%;
+        width: 100%;
+    }
         #Mens{
         height: auto;
         margin: 30px 0px;
@@ -570,9 +610,10 @@ hr {
         --fs-24: 18px;
         --fs-20: 16px;
         --fs-18: 14px;
-        --fs-16: 12px;
-        --fs-14: 10px;
+        --fs-16: 14px;
+        --fs-14: 14px;
     }
+ 
     
     #details {
         height: auto;
@@ -584,10 +625,12 @@ hr {
         gap: 50px;
     }
     
-    #details .wrapper .left {
+  #details .wrapper .left {
         width: 100%;
         height: auto;
         justify-content: start;
+        flex-direction: row;
+        gap: 30px;
     }
     
     #details .wrapper .right {
@@ -596,16 +639,21 @@ hr {
     }
     
     #details .wrapper .left .big-image {
-        width: 50%;
+        width: auto;
         height: auto;
     }
     
     #details .wrapper .left .groups {
-        gap: 8px;
+        width: auto;
+        height: 100%;
+        flex-direction: column;
+        align-content: center;
+        gap: 6px;
     }
-    #details .wrapper .left .groups .images{
-        width: 60px;
-        height: 60px;
+    
+    #details .wrapper .left .groups .images {
+        width: 63px;
+        height: 63px;
     }
     #details .wrapper .left .groups .images img{
         width: 100%;
@@ -619,6 +667,10 @@ hr {
     #details .wrapper .right .product-right .size-section .sizes button {
         width: 18%;
         height: 40px;
+    }
+    #details .wrapper .right .product-right .color-options {
+        height: 150px;
+        width: 150px;
     }
     #Mens{
         height: auto;
@@ -649,11 +701,24 @@ hr {
         --fs-28: 18px;
         --fs-26: 16px;
         --fs-24: 14px;
-        --fs-20: 12px;
-        --fs-18: 10px;
+        --fs-20: 14px;
+        --fs-18: 14px;
       
     }
+    header .wrapper .banner-slider {
+        height: auto;
+        padding: 30px 0px;
+        margin-bottom: 10px;
+      }
     
+      header .wrapper .banner-slider .banner-content {
+        width: 100%;
+      }
+      header .wrapper .banner-slider h2{
+        font-size: var(--fs-32);
+      }
+    
+      
     #details {
         height: auto;
         padding: 20px 0;
@@ -669,6 +734,8 @@ hr {
         width: 100%;
         height: auto;
         justify-content: start;
+        flex-direction: row;
+        gap: 30px;
     }
     
     #details .wrapper .right {
@@ -677,17 +744,21 @@ hr {
     }
     
     #details .wrapper .left .big-image {
-        width: 50%;
+        width: auto;
         height: auto;
     }
     
     #details .wrapper .left .groups {
+        width: auto;
+        height: 100%;
+        flex-direction: column;
+        align-content: center;
         gap: 6px;
     }
     
     #details .wrapper .left .groups .images {
-        width: 50px;
-        height: 50px;
+        width: 63px;
+        height: 63px;
     }
     #details .wrapper .left .groups .images img{
         width: 100%;
@@ -714,18 +785,54 @@ hr {
         width: 40px;
         height: 40px;
     }
-        #modal {
+    #modal {
          height: auto;   
         font-size: var(--fs-12);
-        padding: 16px 0;
+        padding: 16px;
+    }
+    #modal .wrapper{
+        width: 95%;
+        max-width: 560px;
     }
     #modal .checkout-card {
         font-size: var(--fs-10);
-        padding: 16px;
+        padding: 20px;
+        border-radius: 10px;
     }
     .checkout-main {
         flex-direction: column;
 
+    }
+    .product-image img {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+        display: block;
+    }
+    .product-details p{ 
+        line-height: 1.6;
+    }
+    .close-btn{
+        top: 14px;
+        right: 14px;
+        font-size: var(--fs-16);
+    }
+    .price-and-qty {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .qty-box{
+        padding: 0px 14px;
+        /* gap: 14px; */
+    }
+    .qty-box button{
+        font-size: var(--fs-18);
+        min-width: 32px;
+        min-height: 32px;
+    }
+    .button-primary{
+        padding: 10px 20px;
     }
 }
 
@@ -739,9 +846,11 @@ hr {
         --fs-36: 20px;
         --fs-32: 18px;
         --fs-30: 16px;
-        --fs-28: 14px;
-        --fs-26: 12px;
-        --fs-24: 10px;
+        --fs-28: 16px;
+        --fs-26: 14px;
+        --fs-24: 14px;
+        --fs-18: 14px;
+        --fs-16: 12px;
    
     }
     
@@ -807,7 +916,7 @@ hr {
       #modal {
         height: auto;
         font-size: var(--fs-10);
-        padding: 8px 0;
+        padding: 50px 0;
     }
     #modal .checkout-card {
         font-size: var(--fs-10);
@@ -816,6 +925,20 @@ hr {
       .checkout-main {
         flex-direction: column;
 
+    }
+    .product-image img {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+        display: block;
+    }
+    .price-and-qty {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .button-primary{
+        padding: 10px 20px;
     }
 }
 
@@ -828,9 +951,12 @@ hr {
         --fs-40: 20px;
         --fs-36: 18px;
         --fs-32: 16px;
-        --fs-30: 14px;
-        --fs-28: 12px;
-        --fs-26: 12px;
+        --fs-30: 16px;
+        --fs-28: 14px;
+        --fs-26: 14px;
+        --fs-20: 14px;
+        --fs-16: 13px;
+        --fs-14: 12px;
     }
     
     #details {
@@ -904,5 +1030,59 @@ hr {
       .checkout-main {
         flex-direction: column;
 
+    }
+    .product-image img {
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+    .price-and-qty {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .button-primary{
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header .wrapper nav .nav-wrap .menu_icon {
+        display: flex;
+        font-size: 40px;
+        color: #ffffff;
+        justify-content: center;
+        align-items: center;
+    }
+    header .wrapper nav .nav-wrap .icon {
+        display: none;
+    }
+    header .wrapper nav .nav-wrap ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--teritory-black);
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.4s ease;
+        z-index: 10;
+    }
+    #check:checked ~ ul {
+        height: 250px;
+    }
+    header .wrapper nav .nav-wrap ul li {
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .wrapper nav .nav-wrap .menu_icon {
+        font-size: 30px;
+        width: 45px;
+        height: 35px;
     }
 }

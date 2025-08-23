@@ -207,9 +207,78 @@ iconOne.addEventListener('click',function(){
     iconOne.style.color="red";
 });
 // floating btn
-    document.getElementById("floatBtn").addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+//     document.getElementById("floatBtn").addEventListener("click", function() {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth"
+//   });
+// });
+// shoe 
+$(document).ready(function () {
+  // Product variations with images
+  const productData = {
+    green: {
+      big: "./assests/images/product-two/colorGreen.png",
+      thumbs: [
+        "./assests/images/product-two/colorGreen.png",
+        "./assests/images/product-two/viewOne.png",
+        "./assests/images/product-two/viewTwo.png",
+        "./assests/images/product-two/viewThree.png",
+        "./assests/images/product-two/viewFour.png",
+      ],
+    },
+    yellow: {
+      big: "./assests/images/product-two/colorYellow.png",
+      thumbs: [
+        "./assests/images/product-two/colorYellow.png",
+        "./assests/images/product-two/YviewOne.png",
+        "./assests/images/product-two/YviewTwo.png",
+        "./assests/images/product-two/YviewThree.png",
+        "./assests/images/product-two/YviewFour.png",
+      ],
+    },
+  };
+
+  const $bigImage = $(".big-image img");
+  const $thumbnailGroup = $(".groups");
+  const $colorOptions = $(".color-options img");
+
+  // Function to update product images
+  function updateProduct(color) {
+    const data = productData[color];
+
+    // Update main image
+    $bigImage.attr("src", data.big);
+
+    // Clear old thumbnails
+    $thumbnailGroup.empty();
+
+    // Add new thumbnails
+    $.each(data.thumbs, function (index, src) {
+      const $thumb = $("<img>").attr("src", src).addClass("images");
+      if (index === 0) $bigImage.attr("src", src);
+
+      // Click event for thumbnail
+      $thumb.on("click", function () {
+        $bigImage.attr("src", src);
+      });
+
+      $thumbnailGroup.append($thumb);
+    });
+  }
+
+  // Handle color option click
+  $colorOptions.on("click", function () {
+    $colorOptions.removeClass("selected");
+    $(this).addClass("selected");
+
+    if ($(this).attr("alt").includes("Green")) {
+      updateProduct("green");
+    } else {
+      updateProduct("yellow");
+    }
   });
+
+  // Load default (green)
+  updateProduct("green");
 });

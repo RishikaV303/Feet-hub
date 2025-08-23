@@ -1064,8 +1064,8 @@ footer .footer-wrapper .footer-bottom a {
     }
 }
 
-/* Tablet Portrait (481px to 767px) */
-@media screen and (max-width: 768px) and (min-width: 481px) {
+/* Tablet (481px to 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
     :root {
         --fs-96: 48px;
         --fs-70: 40px;
@@ -1074,8 +1074,9 @@ footer .footer-wrapper .footer-bottom a {
         --fs-28: 20px;
         --fs-26: 18px;
         --fs-20: 16px;
-        --fs-18: 14px;
+        --fs-18: 50px;
         --fs-16: 12px;
+        --fs-14: 14px;
     }
 
     header .wrapper nav .nav-wrap ul {
@@ -1221,7 +1222,7 @@ footer .footer-wrapper .footer-bottom a {
 
     footer .footer-wrapper .first-half {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
     }
 
     footer .footer-wrapper .first-half .footer-section {

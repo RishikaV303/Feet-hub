@@ -342,8 +342,8 @@ header .wrapper nav {
 
 @media (max-width: 768px) {
     :root {
-        --fs-14: 10px;
-        --fs-16: 12px;
+        --fs-14: 14px;
+        --fs-16: 13px;
         --fs-18: 14px;
         --fs-20: 16px;
         --fs-24: 20px;
@@ -403,9 +403,9 @@ header .wrapper nav {
 
 @media (max-width: 576px) {
     :root {
-        --fs-14: 9px;
+        --fs-14: 12px;
         --fs-16: 11px;
-        --fs-18: 13px;
+        --fs-18: 16px;
         --fs-20: 15px;
         --fs-24: 19px;
         --fs-26: 21px;
@@ -447,9 +447,9 @@ header .wrapper nav {
 
 @media (max-width: 480px) {
     :root {
-        --fs-14: 8px;
-        --fs-16: 10px;
-        --fs-18: 12px;
+        --fs-14: 12px;
+        --fs-16: 13px;
+        --fs-18: 14px;
         --fs-20: 14px;
         --fs-24: 18px;
         --fs-26: 20px;
