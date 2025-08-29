@@ -231,20 +231,20 @@ header .wrapper nav {
 }
 @media (max-width: 1440px) {
     :root {
-        --fs-14: 13px;
-        --fs-16: 15px;
-        --fs-18: 17px;
-        --fs-20: 19px;
-        --fs-24: 23px;
-        --fs-26: 25px;
-        --fs-28: 27px;
-        --fs-32: 31px;
-        --fs-36: 35px;
-        --fs-40: 39px;
-        --fs-60: 58px;
-        --fs-64: 62px;
-        --fs-70: 68px;
         --fs-96: 94px;
+        --fs-70: 70px;
+        --fs-64: 62px;
+        --fs-60: 60px;
+        --fs-40: 44px;
+        --fs-36: 40px;
+        --fs-32: 36px;
+        --fs-30: 34px;
+        --fs-28: 30px;
+        --fs-26: 28px;
+        --fs-24: 26px;
+        --fs-20: 22px;
+        --fs-18: 20px;
+        --fs-16: 18px;
     }
      #story {
        height: auto;
@@ -265,20 +265,19 @@ header .wrapper nav {
 
 @media (max-width: 1200px) {
     :root {
-        --fs-14: 12px;
-        --fs-16: 14px;
-        --fs-18: 16px;
-        --fs-20: 18px;
-        --fs-24: 22px;
-        --fs-26: 24px;
-        --fs-28: 26px;
+        --fs-96: 80px;
+        --fs-70: 60px;
+        --fs-60: 50px;
+        --fs-40: 36px;
+        --fs-36: 32px;
         --fs-32: 30px;
-        --fs-36: 34px;
-        --fs-40: 38px;
-        --fs-60: 56px;
-        --fs-64: 60px;
-        --fs-70: 66px;
-        --fs-96: 92px;
+        --fs-30: 28px;
+        --fs-28: 26px;
+        --fs-26: 24px;
+        --fs-24: 22px;
+        --fs-20: 20px;
+        --fs-18: 18px;
+        --fs-16: 16px;
     }
      #story {
     height: auto;
@@ -304,20 +303,19 @@ header .wrapper nav {
 
 @media (max-width: 992px) {
     :root {
-        --fs-14: 11px;
-        --fs-16: 13px;
-        --fs-18: 15px;
-        --fs-20: 17px;
-        --fs-24: 21px;
-        --fs-26: 23px;
-        --fs-28: 25px;
-        --fs-32: 29px;
-        --fs-36: 33px;
-        --fs-40: 37px;
-        --fs-60: 54px;
-        --fs-64: 58px;
-        --fs-70: 64px;
-        --fs-96: 90px;
+         --fs-96: 60px;
+        --fs-70: 50px;
+        --fs-60: 40px;
+        --fs-40: 38px;
+        --fs-36: 34px;
+        --fs-32: 30px;
+        --fs-30: 28px;
+        --fs-28: 26px;
+        --fs-26: 24px;
+        --fs-24: 20px;
+        --fs-20: 18px;
+        --fs-18: 16px;
+        --fs-16: 14px;
     }
      #story {
     height: auto;
@@ -342,20 +340,20 @@ header .wrapper nav {
 
 @media (max-width: 768px) {
     :root {
-        --fs-14: 14px;
-        --fs-16: 13px;
-        --fs-18: 14px;
-        --fs-20: 16px;
-        --fs-24: 20px;
-        --fs-26: 22px;
-        --fs-28: 24px;
-        --fs-32: 28px;
-        --fs-36: 32px;
-        --fs-40: 36px;
-        --fs-60: 52px;
-        --fs-64: 50px;
-        --fs-70: 62px;
-        --fs-96: 88px;
+       --fs-96: 44px;
+    --fs-70: 42px;
+    --fs-64: 40px;
+    --fs-60: 38px;
+    --fs-40: 28px;
+    --fs-36: 32px;
+    --fs-32: 28px;
+    --fs-28: 26px;
+    --fs-26: 24px;
+    --fs-24: 22px;
+    --fs-20: 18px;
+    --fs-18: 16px;
+    --fs-16: 14px;
+    --fs-12: 12px;
     }
      #story {
     height: auto;
@@ -395,7 +393,7 @@ header .wrapper nav {
     text-align: center;
   }
   
-  .social-icons {
+  .info-block .social-icons {
     justify-content: center;
     display: flex;
   }
@@ -403,16 +401,15 @@ header .wrapper nav {
 
 @media (max-width: 576px) {
     :root {
-        --fs-14: 12px;
-        --fs-16: 11px;
+        --fs-16: 14px;
         --fs-18: 16px;
-        --fs-20: 15px;
-        --fs-24: 19px;
-        --fs-26: 21px;
-        --fs-28: 23px;
-        --fs-32: 27px;
-        --fs-36: 31px;
-        --fs-40: 35px;
+        --fs-20: 18px;
+        --fs-24: 20px;
+        --fs-26: 22px;
+        --fs-28: 24px;
+        --fs-32: 28px;
+        --fs-36: 32px;
+        --fs-40: 36px;
         --fs-60: 42px;
         --fs-64: 44px;
         --fs-70: 60px;
@@ -447,20 +444,20 @@ header .wrapper nav {
 
 @media (max-width: 480px) {
     :root {
-        --fs-14: 12px;
-        --fs-16: 13px;
-        --fs-18: 14px;
-        --fs-20: 14px;
-        --fs-24: 18px;
-        --fs-26: 20px;
-        --fs-28: 22px;
-        --fs-32: 26px;
-        --fs-36: 30px;
-        --fs-40: 34px;
-        --fs-60: 38px;
-        --fs-64: 30px;
-        --fs-70: 58px;
-        --fs-96: 84px;
+        --fs-96: 44px;
+    --fs-70: 42px;
+    --fs-64: 40px;
+    --fs-60: 38px;
+    --fs-40: 28px;
+    --fs-36: 32px;
+    --fs-32: 28px;
+    --fs-28: 26px;
+    --fs-26: 24px;
+    --fs-24: 22px;
+    --fs-20: 18px;
+    --fs-18: 16px;
+    --fs-16: 14px;
+    --fs-12: 12px;
     }
      #story {
     height: auto;
@@ -495,20 +492,18 @@ header .wrapper nav {
 
 @media (max-width: 319px) {
     :root {
-        --fs-14: 7px;
-        --fs-16: 9px;
-        --fs-18: 11px;
-        --fs-20: 13px;
-        --fs-24: 17px;
-        --fs-26: 19px;
-        --fs-28: 21px;
-        --fs-32: 25px;
-        --fs-36: 29px;
-        --fs-40: 33px;
-        --fs-60: 46px;
-        --fs-64: 50px;
-        --fs-70: 56px;
-        --fs-96: 82px;
+      --fs-96: 44px;
+      --fs-70: 42px;
+      --fs-64: 40px;
+        --fs-60: 38px;
+        --fs-40: 28px;
+        --fs-36: 32px;
+        --fs-32: 28px;
+        --fs-28: 26px;
+        --fs-26: 24px;
+        --fs-20: 18px;
+        --fs-18: 16px;
+        --fs-16: 14px;
     }
      #story {
     height: auto;
