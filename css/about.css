@@ -490,12 +490,12 @@ header .wrapper nav {
   }
 }
 
-@media (max-width: 319px) {
+@media (max-width: 443px) {
     :root {
       --fs-96: 44px;
       --fs-70: 42px;
-      --fs-64: 40px;
-        --fs-60: 38px;
+      --fs-64: 30px;
+        --fs-60: 29px;
         --fs-40: 28px;
         --fs-36: 32px;
         --fs-32: 28px;

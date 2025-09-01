@@ -839,18 +839,18 @@ hr {
 /* Mobile Large (375px to 480px) */
 @media screen and (max-width: 480px) and (min-width: 375px) {
     :root {
-        --fs-96: 36px;
-        --fs-70: 32px;
-        --fs-60: 28px;
-        --fs-40: 24px;
-        --fs-36: 20px;
-        --fs-32: 18px;
-        --fs-30: 16px;
-        --fs-28: 16px;
-        --fs-26: 14px;
-        --fs-24: 14px;
-        --fs-18: 14px;
-        --fs-16: 12px;
+        --fs-96: 44px;
+        --fs-70: 40px;
+        --fs-60: 38px;
+        --fs-40: 34px;
+        --fs-36: 30px;
+        --fs-32: 28px;
+        --fs-30: 26px;
+        --fs-28: 24px;
+        --fs-26: 22px;
+        --fs-24: 20px;
+        --fs-18: 16px;
+        --fs-16: 14px;
    
     }
     
@@ -916,11 +916,11 @@ hr {
       #modal {
         height: auto;
         font-size: var(--fs-10);
-        padding: 50px 0;
+        padding: 50px 0px;
     }
     #modal .checkout-card {
         font-size: var(--fs-10);
-        padding: 8px;
+        padding: 15px;
     }
       .checkout-main {
         flex-direction: column;
@@ -1019,12 +1019,14 @@ hr {
     }
         #modal {
             height: auto;
-        font-size: 9px;
         padding: 4px 0;
     }
     #modal .checkout-card {
-        font-size: 9px;
-        padding: 4px;
+        padding: 15px;
+    }
+    .close-btn {
+        top: 5px;
+        right: 10px;
     }
       .checkout-main {
         flex-direction: column;
@@ -1033,8 +1035,6 @@ hr {
     .product-image img {
         width: 100%;
         max-width: 220px;
-        margin: 0 auto;
-        display: block;
     }
     .price-and-qty {
         flex-direction: column;
