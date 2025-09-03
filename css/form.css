@@ -125,7 +125,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   margin-top: 30px;
 }
 
@@ -135,7 +135,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 20px;
+  gap: 10px;
 }
 
 #buynow-form .wrapper .form-container .payment-info .payment-section label {
@@ -165,8 +165,9 @@ a {
 
 #buynow-form .wrapper .form-container .payment-info .payment-section .form-row {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 20px; */
 }
 
 #buynow-form .wrapper .form-container .payment-info .payment-section #code {
@@ -229,9 +230,7 @@ input[type="radio"]:checked {
   width: 15%;
 }
 
-#code_err {
-  order: 2;
-}
+
 
 span {
   color: red;
@@ -383,7 +382,7 @@ span>i {
     --fs-28: 26px;
     --fs-26: 24px;
     --fs-24: 22px;
-    --fs-20: 18px;
+    --fs-20: 16px;
     --fs-18: 16px;
     --fs-16: 14px;
     --fs-12: 12px;
