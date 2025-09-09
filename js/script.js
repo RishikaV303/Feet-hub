@@ -232,10 +232,10 @@ $(document).ready(function () {
         big: "./assests/images/product-two/colorYellow.png",
         thumbs: [
           "./assests/images/product-two/colorYellow.png",
-          "./assests/images/product-two/YviewOne.png",
-          "./assests/images/product-two/YviewTwo.png",
-          "./assests/images/product-two/YviewThree.png",
-          "./assests/images/product-two/YviewFour.png",
+          "./assests/images/product-two/YellowOne.png",
+          "./assests/images/product-two/YellowTwo.png",
+          "./assests/images/product-two/YellowThree.png",
+          "./assests/images/product-two/YellowFour.png",
         ],
       },
     };
