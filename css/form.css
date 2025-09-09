@@ -169,10 +169,7 @@ a {
   /* align-items: center; */
   /* gap: 20px; */
 }
-#buynow-form .wrapper .form-container .payment-info .payment-section .form-row .coupon{
-  display: flex;
-  gap: 20px;
-}
+
 #buynow-form .wrapper .form-container .payment-info .payment-section #code {
   background-color: transparent;
   border: 1px solid var(--primary-yellow);

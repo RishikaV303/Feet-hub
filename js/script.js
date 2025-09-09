@@ -200,7 +200,7 @@ $(document).ready(function () {
   
       alert("Form submitted successfully!");
       document.querySelector("form").submit();
-      window.location("./product.html");
+      window.location.href = "./product.html";
   };
   
   // let iconOne=document.querySelector("#details .wrapper .right .product-right .header .wishlist");
