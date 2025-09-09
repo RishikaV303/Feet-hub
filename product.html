@@ -517,44 +517,21 @@
 
     <script>
         function toggleDropdown() {
-      document.getElementById("dropdownMenu").classList.toggle("show");
-    }
-
-    // Close dropdown when clicking outside
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
+            document.getElementById("dropdownMenu").classList.toggle("show");
         }
-      }
-    }
-        // filter
-        // const filterToggle = document.getElementById('filterToggle');
-        // const filterSidebar = document.getElementById('filterSidebar');
-        // const filterOverlay = document.getElementById('filterOverlay');
-        // const closeFilter = document.getElementById('closeFilter');
 
-        // filterToggle.addEventListener('click', () => {
-        //     filterSidebar.classList.add('active');
-        //     filterOverlay.classList.add('active');
-        //     document.body.classList.add("no-scroll");
-        // });
-
-        // closeFilter.addEventListener('click', () => {
-        //     filterSidebar.classList.remove('active');
-        //     filterOverlay.classList.remove('active');
-        //     document.body.classList.remove("no-scroll");
-        // });
-
-        // filterOverlay.addEventListener('click', () => {
-        //     filterSidebar.classList.remove('active');
-        //     filterOverlay.classList.remove('active');
-        //     document.body.classList.remove("no-scroll");
-        // });
+        // Close dropdown when clicking outside
+        window.onclick = function (event) {
+            if (!event.target.closest('.dropbtn')) {   
+                let dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
 
     </script>
 </body>
