@@ -721,7 +721,7 @@ header .wrapper .banner-slider .arrow {
 
     header .wrapper nav .nav-wrap ul {
         position: absolute;
-        top: 40px;
+        top: 30px;
         left: 0;
         width: 100%;
         background-color: var(--teritory-black);
