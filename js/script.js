@@ -62,19 +62,19 @@ $(document).ready(function () {
         }
       }
   
-  let forName = () => {
+  // First Name Validation
+  let validateFirstName = () => {
       let inputs = document.querySelectorAll('#user_name');
       let spans = document.querySelectorAll('#name_err');
-      let namePatt = /^[a-zA-Z]{3,}(\s[a-zA-Z]+)?$/;
-  
+      let namePatt = /^[A-Za-z]{3,}$/;
       let valid = true;
       inputs.forEach((input, index) => {
           let val = input.value.trim();
           if (val.length === 0) {
-              spans[index].innerHTML = "Name cannot be empty";
+              spans[index].innerHTML = "First name cannot be empty";
               valid = false;
-          } else if (!val.match(namePatt)) {
-              spans[index].innerHTML = "Enter a valid name (min 3 letters)";
+          } else if (!namePatt.test(val)) {
+              spans[index].innerHTML = "Only alphabets, min 3 letters";
               valid = false;
           } else {
               spans[index].innerHTML = "<i class='bi bi-check-square'></i>";
@@ -82,19 +82,20 @@ $(document).ready(function () {
       });
       return valid;
   };
-  let forLastName = () => {
+  
+  // Last Name Validation
+  let validateLastName = () => {
       let inputs = document.querySelectorAll('#last_name');
       let spans = document.querySelectorAll('#last_err');
-      let namePatt = /^[a-zA-Z]{1,}(\s[a-zA-Z]+)?$/;
-  
+      let namePatt = /^[A-Za-z]{1,}$/;
       let valid = true;
       inputs.forEach((input, index) => {
           let val = input.value.trim();
           if (val.length === 0) {
-              spans[index].innerHTML = "Name cannot be empty";
+              spans[index].innerHTML = "Last name cannot be empty";
               valid = false;
-          } else if (!val.match(namePatt)) {
-              spans[index].innerHTML = "Enter a valid name (min 3 letters)";
+          } else if (!namePatt.test(val)) {
+              spans[index].innerHTML = "Only alphabets, at least 1 letter";
               valid = false;
           } else {
               spans[index].innerHTML = "<i class='bi bi-check-square'></i>";
@@ -103,74 +104,80 @@ $(document).ready(function () {
       return valid;
   };
   
-  let foraddress = () => {
+  // Address Validation
+  let validateAddress = () => {
       let addr = document.getElementById("address").value.trim();
       let err = document.getElementById("address_err");
+      let addrPatt = /^[A-Za-z0-9\s,.-]{10,}$/;
       if (addr.length < 10) {
           err.innerHTML = "Address must be at least 10 characters";
           return false;
+      } else if (!addrPatt.test(addr)) {
+          err.innerHTML = "No special characters like @ # $ % allowed";
+          return false;
       }
       err.innerHTML = "<i class='bi bi-check-square'></i>";
       return true;
   };
   
-  let forlandmark = () => {
+  // Landmark Validation
+  let validateLandmark = () => {
       let landmark = document.getElementById("landmark").value.trim();
       let err = document.getElementById("landmark_err");
+      let landmarkPatt = /^[A-Za-z0-9\s,.-]+$/;
       if (landmark === "") {
-          err.innerHTML = "Please enter a landmark";
+          err.innerHTML = "Landmark cannot be empty";
+          return false;
+      } 
+      else if (!landmarkPatt.test(landmark)) {
+          err.innerHTML = "No special characters allowed";
           return false;
       }
       err.innerHTML = "<i class='bi bi-check-square'></i>";
       return true;
   };
   
-  let forNum = () => {
-      let unum = document.getElementById("userNum").value.trim();
-      let phoneErr = document.getElementById("num_err");
+  // Mobile Number Validation
+ let validateMobile = () => {
+    let unum = document.getElementById("userNum").value.trim();
+    let phoneErr = document.getElementById("num_err");
+    let numPatt = /^[6-9][0-9]{9}$/;  // starts with 6,7,8,9 and total 10 digits
+
+    if (unum.length === 0) {
+        phoneErr.innerHTML = "Enter your mobile number";
+        return false;
+    } else if (!numPatt.test(unum)) {
+        phoneErr.innerHTML = "Mobile number must start with 6, 7, 8, or 9 and be 10 digits";
+        return false;
+    }
+    phoneErr.innerHTML = "<i class='bi bi-check-square'></i>";
+    return true;
+};
+
   
-      if (unum.length === 0 || unum === " ") {
-          phoneErr.innerHTML = "Enter your phone number";
-          return false;
-      }
-  
-      if (isNaN(unum)) {
-          phoneErr.innerHTML = "Only numbers allowed";
-          return false;
-      }
-  
-      let numPatt = /^[6-9][0-9]{9}$/;
-      if (!unum.match(numPatt)) {
-          phoneErr.innerHTML = "Must be a valid 10-digit number";
-          return false;
-      }
-  
-      phoneErr.innerHTML = "<i class='bi bi-check-square'></i>";
-      return true;
-  };
-  let forcode = () => {
-      let unum = document.getElementById("code").value.trim();
-      let phoneErr = document.getElementById("code_err");
-  
-      if (unum.length === 0 || unum === " ") {
-          phoneErr.innerHTML = "Enter your phone number";
-          return false;
-      }
-  
-      if (isNaN(unum)) {
-          phoneErr.innerHTML = "Only numbers allowed";
-          return false;
-      }
-  
-      let numPatt = /^[0-9]{6}$/;
-      if (!unum.match(numPatt)) {
-          phoneErr.innerHTML = "Must be a valid 6-digit number";
-          return false;
-      }
-  
-      phoneErr.innerHTML = "<i class='bi bi-check-square'></i>";
-      return true;
-  };
+  // Pincode Validation
+ let forcode = () => {
+    let pin = document.getElementById("code").value.trim();
+    let pinErr = document.getElementById("code_err");
+    let pinPatt = /^[0-9]{6}$/;
+
+    if (pin.length === 0) {
+        pinErr.innerHTML = "Enter your coupon code";
+        return false;
+    } 
+    else if (!/^[0-9]+$/.test(pin)) {  
+        pinErr.innerHTML = "coupon code accepts numbers only, no alphabets or special characters";
+        return false;
+    }
+    else if (!pinPatt.test(pin)) {
+        pinErr.innerHTML = "Must be a valid 6-digit number";
+        return false;
+    }
+
+    pinErr.innerHTML = "<i class='bi bi-check-square'></i>";
+    return true;
+};
+
   
   let forState = () => {
       let state = document.getElementById("state").value;
@@ -193,14 +200,14 @@ $(document).ready(function () {
   };
   
   let finalSubmit = () => {
-      if (!forName() || !foraddress() || !forlandmark() || !forNum() || !forState() || !forPayment()) {
+      if (!validateFirstName() || !validateLastName() || !validateAddress() || !validateLandmark() || !validateMobile() || !forState() || !forState() || !forPayment()) {
           alert("Please Fill the form");
           return false;
       }
   
       alert("Form submitted successfully!");
       document.querySelector("form").submit();
-      window.location.href = "./product.html";
+      window.location.href = "./products.html";
   };
   
   // let iconOne=document.querySelector("#details .wrapper .right .product-right .header .wishlist");

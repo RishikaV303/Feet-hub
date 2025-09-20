@@ -966,7 +966,7 @@ hr {
     #details .wrapper {
         flex-direction: column;
         gap: 10px;
-        width: 98%;
+        width: 95%;
     }
     
     #details .wrapper .left {

@@ -390,6 +390,7 @@ header .wrapper #banner .carousel.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     border-radius: 8px;
     padding: 10px;
 }
@@ -668,6 +669,11 @@ footer .footer-wrapper .footer-bottom p {
 footer .footer-wrapper .footer-bottom a {
     font-size: var(--fs-14);
     color: white;
+}
+footer .footer-wrapper .footer-bottom .policy-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
 }
 .floating-btn {
   position: fixed; /* stays in place when scrolling */
@@ -1167,6 +1173,9 @@ header .wrapper #banner .carousel .contentFour h1 {
         height: auto;
         gap: 10px;
     }
+    #featured-categories .wrapper .navs a h1 {
+    font-weight: 500;
+    }
 
     #featured-categories .wrapper .tab-content .cards {
         flex-direction: column;
@@ -1349,7 +1358,7 @@ header .wrapper #banner .carousel .contentTwo h1 {
         width: auto;
         /* flex-direction: column; */
         height: auto;
-        gap: 8px;
+        gap: 10px;
         padding: 8px;
     }
 
@@ -1534,7 +1543,7 @@ header .wrapper #banner .carousel .contentTwo h1 {
     }
 
     #featured-categories .wrapper .navs {
-        width: auto;
+        width: 98%;
         /* flex-direction: column; */
         height: auto;
         gap: 6px;
