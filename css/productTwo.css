@@ -727,7 +727,7 @@ hr {
     #details .wrapper {
         flex-direction: column;
         gap: 20px;
-        width: 95%;
+        width: 90%;
     }
     
     #details .wrapper .left {
@@ -862,7 +862,7 @@ hr {
     #details .wrapper {
         flex-direction: column;
         gap: 15px;
-        width: 95%;
+        width: 90%;
     }
     
     #details .wrapper .left {
@@ -966,7 +966,7 @@ hr {
     #details .wrapper {
         flex-direction: column;
         gap: 10px;
-        width: 95%;
+        width: 90%;
     }
     
     #details .wrapper .left {

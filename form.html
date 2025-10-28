@@ -52,12 +52,14 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input type="text" placeholder="Vimala" id="user_name" onkeyup="validateFirstName()"/>
+                                <input type="text" placeholder="Enter your first name" id="user_name"
+                                    onkeyup="validateFirstName()" />
                                 <span id="name_err"></span>
                             </div>
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input type="text" placeholder="Jothi" id="last_name" onkeyup="validateLastName()"/>
+                                <input type="text" placeholder="Enter your last name" id="last_name"
+                                    onkeyup="validateLastName()" />
                                 <span id="last_err"></span>
                             </div>
                         </div>
@@ -84,19 +86,22 @@
 
                         <div class=" full-width">
                             <label>Address</label>
-                            <textarea placeholder="Type your Address" id="address" onkeyup="validateAddress()"></textarea>
+                            <textarea placeholder="Type your Address" id="address"
+                                onkeyup="validateAddress()"></textarea>
                             <span id="address_err"></span>
                         </div>
 
                         <div class="form-group ">
                             <label>Landmark</label>
-                            <input type="text" placeholder="Vetri cinemas Opp" id="landmark" onkeyup="validateLandmark()"/>
+                            <input type="text" placeholder="Enter your landmark" id="landmark"
+                                onkeyup="validateLandmark()" />
                             <span id="landmark_err"></span>
                         </div>
 
                         <div class="form-group ">
                             <label>Mobile Number</label>
-                            <input type="text" placeholder="6381182890" id="userNum" onkeyup="validateMobile()"/>
+                            <input type="text" placeholder="Enter your mobile number" id="userNum"
+                                onkeyup="validateMobile()" />
                             <span id="num_err"></span>
                         </div>
                     </div>
@@ -114,8 +119,9 @@
                             </div>
                             <div class="form-row coupon-row">
                                 <div class="forgap">
-                                <input type="text" placeholder="Enter Code" id="code"  onkeyup="forcode()" required/>
-                                <button type="submit" class="apply">Apply</button>
+                                    <input type="text" placeholder="Enter Code" id="code" onkeyup="forcode()"
+                                        required />
+                                    <button type="submit" class="apply">Apply</button>
                                 </div>
                                 <span id="code_err"></span>
                             </div>
@@ -145,9 +151,9 @@
         <div class="footer-wrapper">
             <div class="first-half">
                 <div class="footer-section brand">
-                     <div class="logo">
+                    <div class="logo">
                         <img src="./assests/images/home/logo.svg" alt="logo">
-                </div>
+                    </div>
                     <p>Stylish and comfortable shoes<br>
                         designed to elevate your<br>
                         everyday look with ease.</p>
@@ -193,6 +199,7 @@
 
 
     </footer>
+    <button id="floatBtn" class="floating-btn"><i class="bi bi-chevron-up"></i></button>
 
     <script src="./js/query.js"></script>
     <script src="./js/script.js"></script>

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,20 +42,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- <div class="banner-slider">
-                <div class="wrapper">
-                    <button class="arrow"><i class="fa-solid fa-chevron-left"></i></button>
-
-                    <div class="banner-content">
-                        <h2>NEW STYLES ON SALE: <span>UP TO 40% OFF</span></h2>
-
-
-                        <a href="#" class="shop-link">Shop All Our New Markdowns</a>
-                    </div>
-
-                    <button class="arrow"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div> -->
         </div>
     </header>
     <main>
@@ -161,7 +148,7 @@
                                     <input type="radio" name="size" value="4">
                                     <span>7.5</span>
                                 </label>
-                                
+
                             </div>
                         </div>
 
@@ -182,7 +169,7 @@
                 <h1>You Might Also Like</h1>
                 <div class="cards">
                     <a href="#">
-                        <div class="product">
+                        <div class="product" data-aos="zoom-in">
                             <div class="image">
                                 <img src="./assests/images/product-two//optionOne.png" alt="images!">
 
@@ -202,7 +189,7 @@
                         </div>
                     </a>
                     <a href="#">
-                        <div class="product">
+                        <div class="product" data-aos="zoom-in">
                             <div class="image">
                                 <img src="./assests/images/product-two/optionTwo.png" alt="images!">
 
@@ -222,7 +209,7 @@
                         </div>
                     </a>
                     <a href="#">
-                        <div class="product">
+                        <div class="product" data-aos="zoom-in">
                             <div class="image">
                                 <img src="./assests/images/product-two/optionThree.png" alt="images!">
 
@@ -364,44 +351,49 @@
 
 
     </footer>
+    <button id="floatBtn" class="floating-btn"><i class="bi bi-chevron-up"></i></button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./js/query.js"></script>
     <script src="./js/script.js"></script>
     <script>
-  // Initial values
-  let price = 1299;   // Product price
-  let discount = 299; // Discount amount
-  let delivery = 50;  // Delivery fee
-  let quantity = 1;   // Default quantity
+        // Initial values
+        let price = 1299;   // Product price
+        let discount = 299; // Discount amount
+        let delivery = 50;  // Delivery fee
+        let quantity = 1;   // Default quantity
 
-  // Get elements
-  const qtyElement = document.querySelector("#quantity"); 
-  const totalElement = document.querySelector("#total"); 
+        // Get elements
+        const qtyElement = document.querySelector("#quantity");
+        const totalElement = document.querySelector("#total");
 
-  // Function to update values
-  function updateValues() {
-    let subtotal = price * quantity;
-    let total = (subtotal - discount) + delivery;
-    qtyElement.textContent = quantity;
-    totalElement.textContent = "₹" + total;
-  }
+        // Function to update values
+        function updateValues() {
+            let subtotal = price * quantity;
+            let total = (subtotal - discount) + delivery;
+            qtyElement.textContent = quantity;
+            totalElement.textContent = "₹" + total;
+        }
 
-  // Increase quantity
-  document.querySelector("#plus").addEventListener("click", function () {
-    quantity++;
-    updateValues();
-  });
+        // Increase quantity
+        document.querySelector("#plus").addEventListener("click", function () {
+            quantity++;
+            updateValues();
+        });
 
-  // Decrease quantity
-  document.querySelector("#minus").addEventListener("click", function () {
-    if (quantity > 1) {
-      quantity--;
-      updateValues();
-    }
-  });
+        // Decrease quantity
+        document.querySelector("#minus").addEventListener("click", function () {
+            if (quantity > 1) {
+                quantity--;
+                updateValues();
+            }
+        });
 
-  // Initialize
-  updateValues();
-</script>
+        // Initialize
+        updateValues();
+    </script>
 </body>
 
 </html>

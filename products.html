@@ -42,20 +42,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- <div class="banner-slider">
-                <div class="wrapper">
-                    <button class="arrow"><i class="fa-solid fa-chevron-left"></i></button>
-
-                    <div class="banner-content">
-                        <h2>NEW STYLES ON SALE: <span>UP TO 40% OFF</span></h2>
-
-
-                        <a href="#" class="shop-link">Shop All Our New Markdowns</a>
-                    </div>
-
-                    <button class="arrow"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div> -->
         </div>
     </header>
     <main>
@@ -64,7 +50,7 @@
                 <div class="search-box">
                     <span class="search-icon"><i class="bi bi-search"></i></span>
                     <form action="">
-                        <input type="text" placeholder="Search for your favorite item">
+                        <input type="text" id="search-input" placeholder="">
                     </form>
                 </div>
                 <div class="dropdown">
@@ -95,7 +81,7 @@
                                 <div class="details">
                                     <h2>UrbanStride Sneakers</h2>
                                     <h4>Men’s Shoes</h4>
-                                    <h4>1 Colour</h4>
+                                    <h4>2 Colours</h4>
 
                                 </div>
                                 <div class="price">
@@ -515,11 +501,40 @@
 
 
     </footer>
+    <button id="floatBtn" class="floating-btn"><i class="bi bi-chevron-up"></i></button>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/query.js"></script>
+    <script src="./js/script.js"></script>
     <script>
         AOS.init();
     </script>
     <script>
+        // search
+
+        let input = document.getElementById('search-input');
+        let texts = ["Search for your favorite item", "Find your perfect fit…", "Search for comfort that walks with you…", "Step into style – search here…"];
+        let index = 0, char = 0;
+
+        function typeNextSuggestion() {
+            let current = texts[index];
+            char = 0;
+            input.placeholder = "";
+            let type = setInterval(() => {
+                if (char < current.length) {
+                    input.placeholder += current.charAt(char++);
+                } else {
+                    clearInterval(type);
+                    setTimeout(() => {
+                        index = (index + 1) % texts.length;
+                        typeNextSuggestion();
+                    }, 2000); // Wait 2 seconds before next word
+                }
+            }, 100); // Typing speed
+        }
+        window.onload = () => {
+            typeNextSuggestion();
+        };
+
         function toggleDropdown() {
             document.getElementById("dropdownMenu").classList.toggle("show");
         }
